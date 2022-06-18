@@ -1,44 +1,28 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/app.css' %}">
-  <title>Tracker</title>
-</head>
-<body>
-  <header>
-    
-    </nav>
-  </header>
-  <main>
-        <div>
-            <h1>My Projects</h1>
-                 {% if not project_list %}
-                    <p>You are not assigned to any projects</p>
-                {% else %}
-                <table>
-                    <thead>
-                        <tr>
-                        <th>Name</th>
-                        <th>Number of tasks</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for project in project_list %}
-                        <tr>
-                            <td>{{ project.name }}</td>
-                            <td> </td>
-                        </tr>
-                    </tbody>
-                {% endfor %}    
-                {% endif %}
-            </table>        
-        </div>
-    </main>
-</body>
-</html>
+{% block content %}
+    <div>
+        <h1>My Projects</h1>
+                {% if not project_list %}
+                <p>You are not assigned to any projects</p>
+            {% else %}
+            <table>
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Number of tasks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for project in project_list %}
+                    <tr>
+                        <td>{{ project.name }}</td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            {% endfor %}    
+            {% endif %}
+        </table>        
+    </div>
+{% endblock content %}
 
