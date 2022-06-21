@@ -24,3 +24,11 @@ class TaskListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Task.objects.filter(assignee=self.request.user)
+
+
+class UpdateTaskView(LoginRequiredMixin, UpdateView):
+    model = Task
+    fields = ["is_completed"]
+
+    def get_success_url(self):
+        return reverse_lazy("show_my_tasks", args=[self.object.id])
