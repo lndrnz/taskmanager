@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
@@ -24,4 +24,10 @@ class ProjectDetailView(LoginRequiredMixin, DetailView):
 class ProjectCreateView(LoginRequiredMixin, CreateView):
     model = Project
     template_name = "projects/create.html"
-    fields = ["name, description, members"]
+    fields = ["name", "description", "members"]
+
+    def form_valid(self, form):
+        item = form.save(commit=False)
+        item.members = self.request.user
+        item.save()
+        return redirect("list_projects")
