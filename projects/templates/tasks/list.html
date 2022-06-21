@@ -3,35 +3,35 @@
 {% block content %}
     <div>
         <h1>My Tasks</h1>
-                {% if not task_list %}
-                <p>You have no tasks</p>
-            {% else %}
+        {% if not task_list %}
+            <p>You have no tasks</p>
+        {% else %}
             <table>
                 <thead>
                     <tr>
-                    <th>Name</th>
-                    <th>Start date</th>
-                    <th>End date</th>
-                    <th>Is completed</th>
+                        <th>Name</th>
+                        <th>Start date</th>
+                        <th>End date</th>
+                        <th>Is completed</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for task in task_list %}
-                    <tr>
-                        <form method="post" action="{% url 'complete_task' task.id %}">
-                            {% csrf_token %}
-                            <input type="hidden" name="is_completed" value="True">
-                            <button>Complete</button>
-                          </form>
-                        <td>{{ task.name }}</td>
-                        <td>{{ task.start_date|date:"m-d-Y" }}</td>
-                        <td>{{ task.due_date|date:"m-d-Y" }}</td>
-                        <td>{{ task.is_completed  }}</td>
-                    </tr>
-                    {% endfor %}  
-                </tbody>  
-            {% endif %}
-        </table>        
+                        <tr>
+                            <form method="post" action="{% url 'complete_task' task.id %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="is_completed" value="True">
+                                <button>Complete</button>
+                            </form>
+                            <td>{{ task.name }}</td>
+                            <td>{{ task.start_date|date:"m-d-Y" }}</td>
+                            <td>{{ task.due_date|date:"m-d-Y" }}</td>
+                            <td>{{ task.is_completed  }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        {% endif %}
+    </table>
     </div>
 {% endblock content %}
 

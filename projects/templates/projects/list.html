@@ -4,30 +4,30 @@
     <div>
         <h1>My Projects</h1>
         <p><a href="{% url 'create_project' %}">Create a new project</a></p>
-                {% if not project_list %}
-                <p>You are not assigned to any projects</p>
-            {% else %}
+        {% if not project_list %}
+            <p>You are not assigned to any projects</p>
+        {% else %}
             <table>
                 <thead>
                     <tr>
-                    <th>Name</th>
-                    <th>Number of tasks</th>
+                        <th>Name</th>
+                        <th>Number of tasks</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for project in project_list %}
-                    <tr>
-                        <td>
-                            <a href="{% url 'show_project' project.id %}">
-                                {{ project.name }}
-                            </a>
-                        </td>
-                        <td>{{ project.tasks.all|length }}</td>
-                    </tr>
-                    {% endfor %}  
-                </tbody>  
-            {% endif %}
-        </table>        
+                        <tr>
+                            <td>
+                                <a href="{% url 'show_project' project.id %}">
+                                    {{ project.name }}
+                                </a>
+                            </td>
+                            <td>{{ project.tasks.all|length }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        {% endif %}
+    </table>
     </div>
 {% endblock content %}
 
