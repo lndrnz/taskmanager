@@ -1,4 +1,3 @@
-{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,51 +5,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="app.css" />
-    <title>Tracker</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'app.css'%}" />
+    <title>Taskmanager+</title>
   </head>
-  <body
-    style="
-      background-image: url('https://i.pinimg.com/originals/9b/0b/c6/9b0bc63a987fbaa2beaa44ba94e105d7.gif');
-    "
-  >
+  <body class="home_background">
     <header>
-      <h1
-        style="
-          font-size: 100px;
-          font-family: 'Brush Script MT';
-          color: #fde8b6;
-          text-align: center;
-        ">
+      <h1 class="home_title">
         Taskmanager+
       </h1>
       <nav>
         <ul class="navigation">
           {% if user.is_authenticated %}
-          <dl style="font-size: 25px">
+          <dl class="sign_up">
             <a href="{% url 'show_my_tasks' %}">My tasks</a>
           </dl>
-          <dl style="font-size: 25px">
+          <dl class="sign_up">
             <a href="{% url 'list_projects' %}">My projects</a>
           </dl>
-          <dl style="font-size: 25px">
+          <dl class="sign_up">
             <a href="{% url 'logout' %}">Logout</a>
           </dl>
           {% if user.is_staff %}
-          <dl><a href="{% url 'admin:index' %}">Admin</a></dl>
+          <dl class="admin_button">
+            <a href="{% url 'admin:index' %}">Admin</a></dl>
           {% endif %} 
           {% else %}
-          <dl style="font-size: 50px;
-          font-family: 'Brush Script MT';
-          color: #fde8b6;
-          text-align: center;
-                    ">
-                    <a href="{% url 'login' %}">Login</a></dl>
-          <dl style="font-size: 50px;
-          font-family: 'Brush Script MT';
-          color: #fde8b6;
-          text-align: center;
-                    ">
+          <dl class="sign_up">
+            <a href="{% url 'login' %}">Login</a></dl>
+          <dl class="sign_up">
             <a href="{% url 'signup' %}">Signup</a>
           </dl>
           {% endif %}

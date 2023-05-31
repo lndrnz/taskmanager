@@ -1,0 +1,80 @@
+.home_background {
+    background-image: url("https://i.pinimg.com/originals/9b/0b/c6/9b0bc63a987fbaa2beaa44ba94e105d7.gif");
+    background-attachment: fixed;
+}
+
+.home_title {
+    font-size: 100px;
+    font-family: 'Brush Script MT';
+    color: #fde8b6;
+    text-align: center;
+    
+}
+
+.sign_up {
+    font-size: 50px;
+    font-family: 'Brush Script MT';
+    color: #fde8b6;
+    text-align: left;
+
+}
+.signup_form {
+    font-size: medium;
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+  
+
+}
+.login_form {
+    font-size: large;
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  
+
+}
+a:link {
+    color: #fde8b6;
+  }
+  
+  a:visited {
+    color: #fde8b6;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: white;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #E5432C;
+  }
+
+.admin_button {
+    font-size: 50px;
+    font-family: 'Brush Script MT';
+    color: #fde8b6;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+.white_button {
+    background-color: #fde8b6;
+    border-radius: 12px;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Arial';
+    font-size: 30px;
+}
