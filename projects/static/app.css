@@ -82,6 +82,7 @@ a:link {
     text-decoration: none;
     display: inline-block;
     font-family: 'Times New Roman';
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-size: 30px;
 }
 
@@ -97,4 +98,17 @@ a:link {
     font-family: 'Times New Roman';
     font-size: 20px;
 
+}
+
+.project_title {
+  color: #fde8b6;
+  font-family: 'Brush Script MT';
+  text-align: left;
+}
+
+.project_detail {
+  color: #fde8b6;
+  font-size: x-large;
+  font-family: 'Brush Script MT';
+  text-align: left;
 }
