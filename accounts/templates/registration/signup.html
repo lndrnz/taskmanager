@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="narrow-form">
-        <h1>Signup</h1>
-        <form method="POST">
+    <div class="narrow-form; background-color: purple">
+        <h1 style="font-size:50px; color: black; background-color: #202A44 ">Signup</h1>
+        <form method="POST" style="background-color: #202A44">
             {% csrf_token %}
             {{ form.as_p }}
-            <button>Signup</button>
+            <button rel="stylesheet" href="style.css">Signup</button>
         </form>
     </div>
 {% endblock content %}

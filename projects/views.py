@@ -28,6 +28,7 @@ class ProjectCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         item = form.save(commit=False)
-        item.members = self.request.user
         item.save()
+        form.save_m2m()
+
         return redirect("list_projects")

@@ -2,37 +2,61 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'css/app.css' %}">
-        <title>Tracker</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul class="navigation">
-                    {% if user.is_authenticated %}
-                        <li><a href="{% url 'show_my_tasks' %}">My tasks</a></li>
-                        <li><a href="{% url 'list_projects' %}">My projects</a></li>
-                        <li><a href="{% url 'logout' %}">Logout</a></li>
-                        {% if user.is_staff %}
-                            <li><a href="{% url 'admin:index' %}">Admin</a></li>
-                        {% endif %}
-                    {% else %}
-                        <li><a href="{% url 'login' %}">Login</a></li>
-                        <li><a href="{% url 'signup' %}">Signup</a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </header>
-        <main>
-            {% block content %}
-            {% endblock content %}
-        </main>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <title>Tracker</title>
+  </head>
+  <body
+    style="
+      background-image: url('https://i.pinimg.com/originals/9b/0b/c6/9b0bc63a987fbaa2beaa44ba94e105d7.gif');
+    "
+  >
+    <header>
+      <h1
+        style="
+          font-size: 100px;
+          font-family: 'Brush Script MT';
+          color: #fde8b6;
+          text-align: center;
+        ">
+        Taskmanager+
+      </h1>
+      <nav>
+        <ul class="navigation">
+          {% if user.is_authenticated %}
+          <dl style="font-size: 25px">
+            <a href="{% url 'show_my_tasks' %}">My tasks</a>
+          </dl>
+          <dl style="font-size: 25px">
+            <a href="{% url 'list_projects' %}">My projects</a>
+          </dl>
+          <dl style="font-size: 25px">
+            <a href="{% url 'logout' %}">Logout</a>
+          </dl>
+          {% if user.is_staff %}
+          <dl><a href="{% url 'admin:index' %}">Admin</a></dl>
+          {% endif %} 
+          {% else %}
+          <dl style="font-size: 50px;
+          font-family: 'Brush Script MT';
+          color: #fde8b6;
+          text-align: center;
+                    ">
+                    <a href="{% url 'login' %}">Login</a></dl>
+          <dl style="font-size: 50px;
+          font-family: 'Brush Script MT';
+          color: #fde8b6;
+          text-align: center;
+                    ">
+            <a href="{% url 'signup' %}">Signup</a>
+          </dl>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+    <main>{% block content %} {% endblock content %}</main>
+  </body>
 </html>
-
-
-

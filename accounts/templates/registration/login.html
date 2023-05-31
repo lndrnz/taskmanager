@@ -1,12 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <div class="narrow-form">
-        <h1>Login</h1>
+        <h1 style="
+            font-size: 80px;
+            font-family: 'Brush Script MT';
+            color: #fde8b6;
+            text-align: left;
+          ">
+            Login</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button>Login</button>
+            <button
+            style ="background-color: #fde8b6;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            
+            ">Login</button>
         </form>
     </div>
 {% endblock content %}
