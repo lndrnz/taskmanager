@@ -11,6 +11,13 @@
     
 }
 
+.home_quote {
+  font-size: 50px;
+    font-family: 'Brush Script MT';
+    color: #fde8b6;
+    text-align: center;
+}
+
 .sign_up {
     font-size: 50px;
     font-family: 'Brush Script MT';
@@ -36,7 +43,6 @@
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    cursor: pointer;
   
 
 }
@@ -75,6 +81,20 @@ a:link {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Arial';
+    font-family: 'Times New Roman';
     font-size: 30px;
+}
+
+.project_button {
+  background-color: goldenrod;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+
 }
