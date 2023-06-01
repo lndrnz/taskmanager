@@ -19,8 +19,8 @@ python manage.py runserver
 The django server should start and you should see this in your browser.
 
 Main Page
-![Image](Mainpage.png)
+![Image](Images/Mainpage.png)
 My Projects Page
-![Image](MyProjects.png)
+![Image](Images/MyProjects.png)
 Clicking on a Project
-![Image](Project%20Detail.png)
+![Image](Images/ProjectDetail.png)
