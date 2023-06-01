@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div>
+    <div class="login_form">
         <h1 class="project_detail" >Create a new project</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button class="project_button">Create</button>
+            <button class="list_button">Create</button>
         </form>
     </div>
 {% endblock content %}

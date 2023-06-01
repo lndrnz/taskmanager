@@ -3,11 +3,11 @@
 
 {% block content %}
     <div>
+        <button class="list_button"><a class="tasks2" href="{% url 'create_task' %}">Create a new task</a></button>
         <h1 class="project_title">{{ project.name }}</h1>
-        {{ project.description|markdownify }}
-        <p1 class="project_detail"><a href="{% url 'create_task' %}">Create a new task</a></p1>
+        <p class="project_title">{{ project.description}}</p>
         {% if project.tasks.all|length %}
-            <table>
+            <table class="project_table">
                 <thead>
                     <tr>
                         <th class= "project_detail">Name</th>

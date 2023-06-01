@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 .home_background {
     background-image: url("https://i.pinimg.com/originals/9b/0b/c6/9b0bc63a987fbaa2beaa44ba94e105d7.gif");
     background-attachment: fixed;
@@ -26,45 +30,57 @@
 
 }
 .signup_form {
-    font-size: medium;
+    background-color: #666;
+    background-position: center;
+    display: inline-block;
+    border-radius: 15px 30px;
+    opacity: 0.8;
+    font-size: large;
+    font-family: 'Brush Script MT' ;
     text-align: center;
-    width: 100%;
+    width: 65%;
     color: white;
-    padding: 14px 20px;
-    border: none;
+    padding: 14px 10px;
+    border: inset;
   
 
 }
 .login_form {
-    font-size: large;
+    background-color: #666;
+    opacity: 0.8;
+    background-position: center;
+    border-radius: 15px 50px;
+    display: inline-block;
+    font-size: x-large;
+    font-family: 'Brush Script MT' ;
     text-align: center;
-    width: 100%;
+    width: 20%;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
+    padding: 20px;
+    margin: 10px;
+    border: inset;
   
 
 }
-a:link {
+.base_links:link {
     color: #fde8b6;
   }
   
-  a:visited {
+  .base_links:visited {
     color: #fde8b6;
   }
   
   /* mouse over link */
-  a:hover {
+  .base_links:hover {
     color: white;
   }
   
   /* selected link */
-  a:active {
+  .base_links:active {
     color: #E5432C;
   }
 
-.admin_button {
+.admin_button:link {
     font-size: 50px;
     font-family: 'Brush Script MT';
     color: #fde8b6;
@@ -72,6 +88,19 @@ a:link {
     top: 8px;
     right: 16px;
 }
+
+.admin_button:visited {
+  color: #fde8b6;
+}
+
+.admin_button:hover {
+  color: white;
+}
+
+.admin_button:active {
+  color: #E5432C;
+}
+
 .white_button {
     background-color: #fde8b6;
     border-radius: 12px;
@@ -81,34 +110,150 @@ a:link {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Times New Roman';
+    font-family: 'Brush Script MT';
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-size: 30px;
+    transition-duration: 0.3s;
 }
 
-.project_button {
-  background-color: goldenrod;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Times New Roman';
-    font-size: 20px;
 
+.white_button:hover {
+  background-color: white;
+
+}
+
+.white_button:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
 }
 
 .project_title {
   color: #fde8b6;
   font-family: 'Brush Script MT';
-  text-align: left;
+  font-size: xx-large;
+  text-align: center;
 }
 
 .project_detail {
   color: #fde8b6;
+  font-size: large;
+  font-family: 'Brush Script MT';
+  text-align: center;
+}
+
+.project_detail:visited {
+  color: black
+}
+.list_button {
+  background-color: #fde8b6;
+    border-radius: 12px;
+    border: none;
+    color: black;
+    padding: 15px 32px; 
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Brush Script MT';
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 30px;
+    transition-duration: 0.3s;
+
+}
+
+.list_button:hover {
+  background-color: white;
+
+}
+
+.list_button:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
+.list_link:visited {
+  color:black
+}
+
+.project_table {
+  background-color: #666;
+  background-position: center;
+  display: inline-block;
+  border-radius: 15px 30px;
+  opacity: 0.8;
+  font-size: large;
+  font-family: 'Brush Script MT' ;
+  text-align: right center;
+  width: 30%;
+  color: white;
+  padding: 14px 10px;
+  border: inset;
+}
+
+.task_detail {
+  color: #fde8b6;
   font-size: x-large;
   font-family: 'Brush Script MT';
-  text-align: left;
+  text-align: center;
+}
+
+.tasks:visited {
+  color: white
+}
+
+.tasks:link {
+  color: white
+}
+
+.tasks:hover {
+  color: black
+}
+
+.tasks:active {
+  color: red
+}
+
+.tasks2 {
+  padding: 0.5
+}
+.tasks2:visited {
+  color: black
+}
+
+.tasks2:link {
+  color: black
+}
+
+.tasks2:hover {
+  color: orange;
+}
+
+.tasks2:active {
+  color: red
+}
+
+.task_button {
+  background-color: #fde8b6;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Brush Script MT';
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 20px;
+    transition-duration: 0.3s;
+}
+
+
+.task_button:hover {
+  background-color: white;
+
+}
+
+.task_button:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(1px);
 }

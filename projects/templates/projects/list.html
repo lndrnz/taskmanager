@@ -2,11 +2,13 @@
 
 {% block content %}
     <div>
-        <button class="project_button"><a href="{% url 'create_project' %}">Create a new project</a></button>
+        <div>
+        <button class="list_button"><a class="list_link" href="{% url 'create_project' %}">Create a new project</a></button>
+        </div>
         {% if not project_list %}
             <p>You are not assigned to any projects</p>
         {% else %}
-            <table>
+            <table class="project_table">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -17,7 +19,7 @@
                     {% for project in project_list %}
                         <tr>
                             <td>
-                                <a href="{% url 'show_project' project.id %}">
+                                <a class="tasks" href="{% url 'show_project' project.id %}">
                                     {{ project.name }}
                                 </a>
                             </td>
