@@ -7,7 +7,7 @@ This project was used to challenge myself and familiarize CSS and HTML aspects i
 
 ### Deployment
 In order to deploy this project, you need to make a virtual environment. Run the commands:
-
+```
 python -m venv .venv
 
 source .venv/bin/activate 
@@ -15,7 +15,7 @@ source .venv/bin/activate
 pip install -r requiremenets.txt
 
 python manage.py runserver
-
+```
 The django server should start and you should see this in your browser.
 
 Main Page
